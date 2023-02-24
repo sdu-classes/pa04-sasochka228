@@ -11,8 +11,8 @@ public class MovaeblePoint {
         this.ySpeed = ySpeed;
     }
     public String toString(){
-        return String.format("(%1$s, %2$s), speed=(%3$s, %4$s) " , x,y,xSpeed,ySpeed);
-    }
+        return "("+this.x + "," + this.y + "), speed =("+this.xSpeed + ","+this.ySpeed+")";}
+        
     public void moveUp(){
         y -= ySpeed;
     }
@@ -30,3 +30,4 @@ public class MovaeblePoint {
     }
 
 }
+
