@@ -3,12 +3,12 @@ public class MoveableCircle implements Movable{
 
     private MovaeblePoint center;
 
-    private MoveableCircle(int x , int y ,int xSpeed , int ySpeed,int radius){
+    MoveableCircle(int x , int y ,int xSpeed , int ySpeed,int radius){
         center = new MovaeblePoint(x,y,xSpeed,ySpeed);
         radius1=radius;
     }
     public String toString(){
-        return String.format("(%1$s, %2$s), speed=(%3$s, %4$s), radius=%4$s" ,
+        return String.format("(%1$s, %2$s), speed=(%3$s, %4$s), radius=%5$s" ,
                 center.x, center.y, center.xSpeed,center.ySpeed, radius1);}
 
     @Override
