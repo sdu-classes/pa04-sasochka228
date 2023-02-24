@@ -7,7 +7,7 @@ public class MoveableCircle implements Movable{
         center = new MovaeblePoint(x,y,xSpeed,ySpeed);
         this.radius=radius;
     }
-    
+
     @Override
     public void moveUp() {center.moveUp();
 
@@ -28,6 +28,5 @@ public class MoveableCircle implements Movable{
 
     }
     public String toString(){
-        return String.format("(%1$s, %2$s), speed=(%3$s, %4$s), radius=%5$s" ,
-                center.x, center.y, center.xSpeed,center.ySpeed, radius);}
-}
+        return "("+center.x + "," + center.y + "), speed =("+center.xSpeed + ","+center.ySpeed+"), radius = "+radius;
+}}
