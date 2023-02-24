@@ -1,33 +1,33 @@
-public class MovablePoint {
-    public int x;
-    public int y;
-    public int xSpeed;
-    public int ySpeed;
+public class MovableCircle implements Movaable {
+    MovablePoint center;
+    int radius;
 
-    public MovablePoint(int x, int y, int xSpeed, int ySpeed) {
-        this.x = x;
-        this.y = y;
-        this.xSpeed = xSpeed;
-        this.ySpeed = ySpeed;
+    public MovableCircle(int x, int y, int xSpeed, int ySpeed, int radius) {
+        this.center = new MovablePoint(x, y, xSpeed, ySpeed);
+        this.radius = radius;
     }
 
-    public String toString() {
-        return "(" + this.x + "," + this.y + "), speed =(" + this.xSpeed + "," + this.ySpeed + ")";
-    }
-
+    @Override
     public void moveUp() {
-        y -= ySpeed;
+        center.moveUp();
     }
 
+    @Override
     public void moveDown() {
-        y += ySpeed;
+        center.moveDown();
     }
 
+    @Override
     public void moveLeft() {
-        x -= xSpeed;
+        center.moveLeft();
     }
 
+    @Override
     public void moveRight() {
-        x += xSpeed;
+        center.moveRight();
+    }
+
+    public String toString(){
+        return "("+center.x + "," + center.y + "), speed =("+center.xSpeed + ","+center.ySpeed+"), radius = "+radius;
     }
 }
