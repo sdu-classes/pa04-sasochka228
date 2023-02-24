@@ -3,7 +3,7 @@ public class MoveableCircle implements Movable{
 
     public MovaeblePoint center;
 
-    public MoveableCircle(int x , int y ,int xSpeed , int ySpeed,int radius){
+    MoveableCircle(int x , int y ,int xSpeed , int ySpeed,int radius){
         center = new MovaeblePoint(x,y,xSpeed,ySpeed);
         this.radius=radius;
     }
