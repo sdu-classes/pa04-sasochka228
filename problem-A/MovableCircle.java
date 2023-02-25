@@ -9,8 +9,8 @@ public class MoveableCircle implements Movable{
     }
     public String toString(){
         return String.format("%s, radius=%d" , this.center.toString(), this,radius);}
-    
-    }
+
+
 
     @Override
     public void moveUp() {
@@ -35,5 +35,5 @@ public class MoveableCircle implements Movable{
         this.center.moveRight();
 
     }
-    
+
 }
