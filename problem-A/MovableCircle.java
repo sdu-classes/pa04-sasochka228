@@ -1,32 +1,39 @@
 public class MoveableCircle implements Movable{
     private int radius;
 
-    public MovaeblePoint center;
+    private MovaeblePoint center;
 
-    MoveableCircle(int x , int y ,int xSpeed , int ySpeed,int radius){
-        center = new MovaeblePoint(x,y,xSpeed,ySpeed);
+    public MoveableCircle(int x , int y ,int xSpeed , int ySpeed,int radius){
+        this.center = new MovaeblePoint(x,y,xSpeed,ySpeed);
         this.radius=radius;
     }
-
-    @Override
-    public void moveUp() {center.moveUp();
-
-    }
-
-    @Override
-    public void moveDown() {center.moveDown();
-
-    }
-
-    @Override
-    public void moveLeft() {center.moveLeft();
-
-    }
-
-    @Override
-    public void moveRight() {center.moveRight();
-
-    }
     public String toString(){
-        return "("+center.x + "," + center.y + "), speed =("+center.xSpeed + ","+center.ySpeed+"), radius = "+radius;
-}}
+        return String.format("%s, radius=%d" , this.center.toString(), this,radius);}
+    
+    }
+
+    @Override
+    public void moveUp() {
+        this.center.moveUp();
+
+    }
+
+    @Override
+    public void moveDown() {
+        this.center.moveDown();
+
+    }
+
+    @Override
+    public void moveLeft() {
+        this.center.moveLeft();
+
+    }
+
+    @Override
+    public void moveRight() {
+        this.center.moveRight();
+
+    }
+    
+}
