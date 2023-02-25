@@ -1,4 +1,4 @@
-public class MovaeblePoint {
+public class MovaeblePoint implements Movable {
     public int x ;
     public int y ;
     public int xSpeed;
@@ -13,17 +13,21 @@ public class MovaeblePoint {
     public String toString(){
         return "("+this.x + "," + this.y + "), speed =("+this.xSpeed + ","+this.ySpeed+")";}
 
+    @Override
     public void moveUp(){
         y -= ySpeed;
     }
+    @Override
     public void moveDown(){
         y += ySpeed;
 
     }
+    @Override
     public void moveLeft(){
         x -= xSpeed;
 
     }
+    @Override
     public void moveRight(){
         x += xSpeed;
 
